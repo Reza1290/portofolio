@@ -267,7 +267,7 @@ export default function Home() {
         </div>
       </section>
       <section className="relative flex flex-col items-center justify-center mx-16 max-w-screen-lg w-full">
-        <h1 className="uppercase text-4xl font-black ">Feautured Works</h1>
+        <h1 className="uppercase text-4xl font-black ">Featured Works</h1>
             
       </section>
     </main>
