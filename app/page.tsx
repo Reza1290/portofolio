@@ -153,7 +153,7 @@ export default function Home() {
           <div className="relative flex gap-6 carousel-secondary">
 
             {imageUrls.map((url, index) =>
-              <StackComponent type={url.toUpperCase()} id={`${"stack" + index}`} name="stack" imageUrl={`${"assets/" + url + ".jpg"}`} last={imageUrls.length - 1 == index} first={index == 0} />
+              <StackComponent key={index} type={url.toUpperCase()} id={`${"stack" + index}`} name="stack" imageUrl={`${"assets/" + url + ".jpg"}`} last={imageUrls.length - 1 == index} first={index == 0} />
             )}
           </div>
         </section>
