@@ -198,7 +198,7 @@ export default function Home() {
               <SubtitleJourneyComponent subtitle="POLITEKNIK ELEKTRONIKA NEGERI SURABAYA (EEPIS)" reference="" />
               <CardJourneyComponent>
                 <p>
-                  &nbsp; &nbsp;  &nbsp;I'm grateful to have been accepted into Politeknik Elektronika Negeri Surabaya, where <strong>I pursued a diploma in Informatics Engineering</strong>. My journey continued to evolve as I participated in several competitions, including UI/UX design and business competitions that won an award, and even wrote a paper. I also earned a national <strong>certification as a Junior Web Developer</strong>.
+                  &nbsp; &nbsp;  &nbsp;I&apos;m grateful to have been accepted into Politeknik Elektronika Negeri Surabaya, where <strong>I pursued a diploma in Informatics Engineering</strong>. My journey continued to evolve as I participated in several competitions, including UI/UX design and business competitions that won an award, and even wrote a paper. I also earned a national <strong>certification as a Junior Web Developer</strong>.
                 </p>
                 <br />
                 <p>
