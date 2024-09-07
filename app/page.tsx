@@ -243,15 +243,15 @@ export default function Home() {
               <SubtitleJourneyComponent subtitle="SMA NEGERI 8 SURABAYA" reference="https://sman8sby.sch.id/" />
               <CardJourneyComponent>
                 <p>
-                  &nbsp; &nbsp;  &nbsp;In this year, the <strong>COVID-19 pandemic hit</strong>, and I had to study from home. But this became an opportunity for me to dive into how games are made and to <strong>begin learning programming</strong>. I started with the basics—flowcharts, data types—and even though I didn't go too deep, I managed to learn <strong>my first programming language, its C++</strong>.
+                  &nbsp; &nbsp;  &nbsp;In this year, the <strong>COVID-19 pandemic hit</strong>, and I had to study from home. But this became an opportunity for me to dive into how games are made and to <strong>begin learning programming</strong>. I started with the basics—flowcharts, data types—and even though I didn&apos;t go too deep, I managed to learn <strong>my first programming language, its C++</strong>.
 
                 </p>
                 <br />
                 <p>
-                  &nbsp;  &nbsp;  &nbsp;I also continued <strong>submitting abstracts to various competitions</strong>, even though I didn't make it to the finals.
-                  It's okay, it <strong>was a great learning experience!</strong> This year
+                  &nbsp;  &nbsp;  &nbsp;I also continued <strong>submitting abstracts to various competitions</strong>, even though I didn&apos;t make it to the finals.
+                  It&apos;s okay, it <strong>was a great learning experience!</strong> This year
                   was also filled with some disappointment, as I was rejected from several of my dream universities.
-                  But <strong>I didn't give up</strong>, and eventually, I found myself at <a href="https://pens.ac.id/" target="_blank" className="font-bold">Politeknik Elektronika Negeri Surabaya</a>, which has now become my favorite campus!
+                  But <strong>I didn&apos;t give up</strong>, and eventually, I found myself at <a href="https://pens.ac.id/" target="_blank" className="font-bold">Politeknik Elektronika Negeri Surabaya</a>, which has now become my favorite campus!
 
                 </p>
               </CardJourneyComponent>
