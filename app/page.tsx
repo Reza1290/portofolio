@@ -321,24 +321,49 @@ export default function Home() {
       </section>
       <section className="w-full relative z-2 w-full flex justify-center">
         <div className="relative flex flex-col px-16 max-w-screen-lg py-16 grid grid-cols-12 gap-8">
-          <ProductComponent title="Pemrograman Tech" desc="I create Pemrograman Tech to make Tutorial about Tech such as web Programming." 
-          youtube="https://www.youtube.com/@pemrogramantech"
-          instagram="https://instagram.com/pemrograman.tech"
-          link="https://www.pemrograman.tech"
-          image="yt_pemrograman"
+          <ProductComponent title="Pemrograman Tech" desc="I create Pemrograman Tech to make Tutorial about Tech such as web Programming."
+            youtube="https://www.youtube.com/@pemrogramantech"
+            instagram="https://instagram.com/pemrograman.tech"
+            link="https://www.pemrograman.tech"
+            image="yt_pemrograman"
           ></ProductComponent>
-          <ProductComponent title="ReCode Daily" desc="Share my code or knowledge as daily Programming." 
-          instagram="https://instagram.com/re.codedaily"
-          image="ig_recode"
+          <ProductComponent title="CiptaKode" desc="I offer some service about hosting, web programming, such as slicing, develop website etc."
+            instagram="https://instagram.com/ciptakode"
+            link="https://ciptakode.biz.id"
+            image="wb_ciptakode"
           ></ProductComponent>
-          <ProductComponent title="CiptaKode" desc="I offer some service about web programming, such as slicing, develop website etc." 
-          instagram="https://instagram.com/ciptakode"
-          link="https://ciptakode.biz.id"
-          image="web_ciptakode"
+          <ProductComponent title="ReCode Daily" desc="Share my code or knowledge as daily Programming."
+            instagram="https://instagram.com/re.codedaily"
+            image="ig_recode"
           ></ProductComponent>
+
+        </div>
+      </section>
+      <section className="relative bg-gradient-to-t from-slate-100/5 to-utama h-80 z-2 w-full"></section>
+      <section className="bg-utama w-full py-8 z-2 relative flex flex-col justify-center items-center gap-8">
+        <div className={jua.className}>
+          <p className="text-4xl font-bold select-none">Reza</p>
+        </div>
+        <div className="flex gap-8">
+          <div className="">
+            Hubungi Saya
+          </div>
+          <div className="">
+            Download Cv
+          </div>
+          <div className="">
+            Labs
+          </div>
+          <div>
+            Xd
+          </div>
+        </div>
+        <div className="text-center font-semibold">
+          ©2024-2025 Reza1290. CopyLeft. <br /> Design Inspired by Tako & FontAwesome ♥, rest is my idea! :D
         </div>
       </section>
     </main>
+
 
   </>
   );
