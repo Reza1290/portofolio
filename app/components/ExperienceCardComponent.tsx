@@ -12,7 +12,7 @@ interface ExperienceCardProps {
 const   ExperienceCardComponent:React.FC<ExperienceCardProps> = ({title, subtitle, month,year, type = 'aw',href =''}) => {
 
     return (
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-4 gap-8 max-sm:scale-[80%]">
             <div className={`place-self-end leading-4 ${type == 'aw' ? 'bg-green-500 border-green-700' : type == 'exp' ? 'bg-blue-500 border-blue-700' : 'bg-red-400 border-red-700'} border border-x-0 border-t-0 border-b-[0.2rem]  w-20 h-20 rounded-lg flex flex-col justify-center items-center p-2 `}>
                 <div className="font-bold">{month}</div>
                 <div className="text-xl font-black">{year}</div>
@@ -20,7 +20,7 @@ const   ExperienceCardComponent:React.FC<ExperienceCardProps> = ({title, subtitl
             <Link href={href} className="col-span-3 relative">
                 <div className={`relative z-[20] leading-4  ${type == 'aw' ? 'bg-green-500 border-green-700' : type == 'exp' ? 'bg-blue-500 border-blue-700' : 'bg-red-400 border-red-700'} border border-x-0 border-t-0 border-b-[0.2rem]  h-20 px-4 rounded-lg flex flex-col justify-center items-start p-2 `}>
                     <div className="text-xl font-black line-clamp-1">{title}</div>
-                    <div className="font-bold">{subtitle}</div>
+                    <div className="font-bold line-clamp-1">{subtitle}</div>
                 </div>
                 <div className={` absolute top-0 ${type == 'aw' ? 'bg-green-800' : type == 'exp' ? 'bg-blue-800' : 'bg-red-700'} h-20 -right-10 w-20 rounded-md flex justify-end `}>
                     <div className="origin-center -rotate-90 fill-white translate-x-4">
