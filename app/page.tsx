@@ -288,7 +288,7 @@ export default function Home() {
       </section>
       {/* <CalendarComponent></CalendarComponent> */}
       <section className="relative flex flex-col items-center justify-center px-16 max-w-screen-lg w-full py-16">
-        <h1 className="uppercase text-4xl font-black mt-12"> What I've Achieved</h1>
+        <h1 className="uppercase text-4xl font-black mt-12"> What I&apos;ve Achieved</h1>
         <h1 className=" text-xl font-semibold mb-12 text-slate-200"><span className="bg-blue-400 rounded px-1">Experiences</span>, <span className="bg-red-400 rounded px-1">Certifications  or Licenses</span>, <span className="bg-green-500 px-1 rounded">Awards</span></h1>
         <div className="relative w-full flex justify-center items-center grid grid-rows-4 gap-y-8">
           <ExperienceCardComponent type="exp" month="Nov" year="2023" title="Intership Web Developer (3 Months)" subtitle="PT. Digital Solusi Master" />
@@ -319,7 +319,7 @@ export default function Home() {
         </div>
       </section>
       <section className="h-40 w-full relative z-2">
-        
+
       </section>
     </main>
 
