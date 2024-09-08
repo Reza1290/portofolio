@@ -17,6 +17,9 @@ import SubtitleJourneyComponent from "./components/SubtitleJourneyComponent";
 import CardJourneyComponent from "./components/CardJourneyComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LinkComponent from "./components/LinkComponent";
+import FlipCardComponent from "./components/FlipCardComponent";
+import CalendarComponent from "./components/CalendarComponent";
+import ExperienceCardComponent from "./components/ExperienceCardComponent";
 const jua = Jua({ weight: "400", subsets: ["latin"] });
 export default function Home() {
   const [init, setInit] = useState(false);
@@ -158,7 +161,7 @@ export default function Home() {
           </div>
         </section>
       </section>
-      <section className="relative flex flex-col items-center justify-center mx-16 max-w-screen-lg w-full">
+      <section className="relative flex flex-col items-center justify-center px-16 max-w-screen-lg w-full">
         <h1 className="uppercase text-4xl font-black ">MY Journey</h1>
         <div className="grid grid-cols-9 w-full my-10">
           <div className="col-span-4 grid grid-rows-4 justify-end text-end gap-4">
@@ -266,9 +269,57 @@ export default function Home() {
 
         </div>
       </section>
-      <section className="relative flex flex-col items-center justify-center mx-16 max-w-screen-lg w-full">
-        <h1 className="uppercase text-4xl font-black ">Featured Works</h1>
-            
+      <section className="relative flex flex-col items-center justify-center px-16 max-w-screen-lg w-full">
+        <h1 className="uppercase text-4xl font-black my-12">Featured Works</h1>
+        <div className="grid grid-cols-11 w-full my-10">
+          <div className="col-span-3 flex justifty-center items-center">
+            {/* <div  className="flip bg-blue-400 transform rotate-y-30 hover:bg-blue-500 cursor-pointer transition-all ease-in-out w-full min-h-[20rem] rounded-md border border-x-0 border-t-0 border-b-[0.2rem] border-blue-600">
+
+            </div> */}
+            <FlipCardComponent />
+          </div>
+          <div className="col-start-5 col-span-3"><div className="bg-red-400 hover:bg-red-500 cursor-pointer transition-all ease-in-out w-full min-h-[20rem] rounded-md border border-x-0 border-t-0 border-b-[0.2rem] border-red-600">
+
+          </div></div>
+          <div className="col-span-3 col-start-9"><div className="bg-yellow-400 hover:bg-yellow-500 cursor-pointer transition-all ease-in-out w-full min-h-[20rem] rounded-md border border-x-0 border-t-0 border-b-[0.2rem] border-yellow-600">
+
+          </div></div>
+        </div>
+      </section>
+      {/* <CalendarComponent></CalendarComponent> */}
+      <section className="relative flex flex-col items-center justify-center px-16 max-w-screen-lg w-full py-16">
+        <h1 className="uppercase text-4xl font-black mt-12"> What I've Achieved</h1>
+        <h1 className=" text-xl font-semibold mb-12 text-slate-200"><span className="bg-blue-400 rounded px-1">Experiences</span>, <span className="bg-red-400 rounded px-1">Certifications  or Licenses</span>, <span className="bg-green-500 px-1 rounded">Awards</span></h1>
+        <div className="relative w-full flex justify-center items-center grid grid-rows-4 gap-y-8">
+          <ExperienceCardComponent type="exp" month="Nov" year="2023" title="Intership Web Developer (3 Months)" subtitle="PT. Digital Solusi Master" />
+
+          <ExperienceCardComponent month="Nov" year="2023" title="1st Winner at FASILKOM FEST UPN " subtitle="Business Plan Competition" />
+          <ExperienceCardComponent month="Nov" year="2023" title="3rd Winner at FASILKOM FEST UPN " subtitle="Ui/Ux Competition" />
+          <ExperienceCardComponent type="cert" month="Nov" year="2023" title="Certificate Junior Web Developer" subtitle="National Certification by BNSP" />
+          <ExperienceCardComponent month="Mar" year="2023" title="Silver Medal at IYSA COMPETITION " subtitle="Innovation Competition" />
+          <ExperienceCardComponent month="Feb" year="2022" title="2nd Winner at IE FAIR 17th " subtitle="Industrial Engineering Olympiad" />
+          <ExperienceCardComponent month="Dec" year="2021" title="3rd Winner at CERDAS CERMAT SMA AWARDS 2021" subtitle="Nationality(Pancasila) Olympiad" />
+          <ExperienceCardComponent month="Oct" year="2021" title="4th Winner at KOMPETISI KIMIA UNAIR" subtitle="Chemistry Olympiad" />
+
+        </div>
+      </section>
+      <section className="flex flex-col w-full bg-slate-800 relative z-2 items-center ">
+        <div className="relative flex flex-col px-16 max-w-screen-lg py-16 grid grid-cols-2 gap-16">
+          <div className="flex flex-col gap-6">
+            <h1 className="text-3xl font-bold">What I&apos;ve Built</h1>
+            <h1 className="text-md mb-12 text-slate-200 text-justify">This is the various digital products and platforms I&apos;ve created over the years. From YouTube channels and blogs to entrepreneurial ventures, each project reflects my passion for innovation and creativity.
+              Whether it&apos;s sharing knowledge, building communities, or launching a business, these creations represent my journey of growth and learning in the digital world. Explore the projects that have shaped my skills and vision for the future.
+            </h1>
+          </div>
+              <div className="relative z-[99] min-h-[450px]">
+                <div className='absolute z-[93] bg-blue-700 top-20 left-60 border-blue-900 border-x-0 border-b-[0.2rem] border-t-0 rounded-md h-64 w-96 bg-cover no-repeat bg-[url("/assets/product/blog_pemrograman.png")]'></div>
+                <div className='absolute z-[92] bg-blue-700 border-blue-900 border-x-0 border-b-[0.2rem] border-t-0 rounded-md h-64 w-96 bg-cover no-repeat bg-[url("/assets/product/yt_pemrograman.png")]'></div>
+                <div className='absolute z-[94] top-72 left-40 bg-blue-700 border-blue-900 border-x-0 border-b-[0.2rem] border-t-0 rounded-md h-32 w-72 bg-cover no-repeat bg-[url("/assets/product/ig_recode.png")]'></div>
+              </div>
+        </div>
+      </section>
+      <section className="h-40 w-full relative z-2">
+        
       </section>
     </main>
 

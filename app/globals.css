@@ -81,32 +81,40 @@ body {
     rgb(15 25 30) , rgb(15 25 30),  transparent
   ); */
 
-  
+
 }
 
-.mask-first{
-  mask-image: linear-gradient(
-    to left, 
-    rgba(15, 25, 30, 1) 0%, /* Fully opaque at the start */
-    rgba(15, 25, 30, 1) 30%, /* Keep it opaque for the first 30% */
-    rgba(15, 25, 30, 0.6) 50%, /* Start fading out */
-    rgba(15, 25, 30, 0.2) 70%, /* More transparency */
-    transparent 100% /* Fully transparent at the end */
-  );
+.mask-first {
+  mask-image: linear-gradient(to left,
+      rgba(15, 25, 30, 1) 0%,
+      /* Fully opaque at the start */
+      rgba(15, 25, 30, 1) 30%,
+      /* Keep it opaque for the first 30% */
+      rgba(15, 25, 30, 0.6) 50%,
+      /* Start fading out */
+      rgba(15, 25, 30, 0.2) 70%,
+      /* More transparency */
+      transparent 100%
+      /* Fully transparent at the end */
+    );
 
   mask-size: 100%;
   mask-repeat: no-repeat;
 }
 
-.mask-last{
-  mask-image: linear-gradient(
-    to right, 
-    rgba(15, 25, 30, 1) 0%, /* Fully opaque at the start */
-    rgba(15, 25, 30, 1) 30%, /* Keep it opaque for the first 30% */
-    rgba(15, 25, 30, 0.6) 50%, /* Start fading out */
-    rgba(15, 25, 30, 0.2) 70%, /* More transparency */
-    transparent 100% /* Fully transparent at the end */
-  );
+.mask-last {
+  mask-image: linear-gradient(to right,
+      rgba(15, 25, 30, 1) 0%,
+      /* Fully opaque at the start */
+      rgba(15, 25, 30, 1) 30%,
+      /* Keep it opaque for the first 30% */
+      rgba(15, 25, 30, 0.6) 50%,
+      /* Start fading out */
+      rgba(15, 25, 30, 0.2) 70%,
+      /* More transparency */
+      transparent 100%
+      /* Fully transparent at the end */
+    );
   /* mask-size: 100%; */
   mask-repeat: no-repeat;
 }
@@ -142,4 +150,39 @@ body {
   -moz-animation-play-state: paused;
   -o-animation-play-state: paused;
   animation-play-state: paused;
+}
+
+.flip:hover {
+  transform: rotateY(50deg);
+  transition: all 20s linear ease-in-out;
+  transition-duration: 1000ms;
+}
+
+.cursor-mini {
+
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-track {
+    width: 8px;
+    border: none;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-button,
+  ::-webkit-scrollbar-track-piece,
+  ::-webkit-scrollbar-corner,
+  ::-webkit-resizer {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: #1A5FAC;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-image: url("https://i.imgur.com/GvV1R30.png");
+    background-repeat: repeat-y;
+    background-size: contain;
+  }
 }
