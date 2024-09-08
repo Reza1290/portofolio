@@ -55,7 +55,7 @@ export default function Home() {
       interactivity: {
         events: {
           onClick: {
-            enable: true,
+            enable: false,
             mode: "push",
           },
           onHover: {
@@ -118,11 +118,11 @@ export default function Home() {
   const imageUrls = ["c", "py", "go", "js", "php", "java", "ts"]
 
   if (init) return (<>
-    <Particles
+    {/* <Particles
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={options}
-    />
+    /> */}
     <main className="flex min-h-screen flex-col items-center bg-utama max-w-layar">
       <nav className="flex justify-between items-center w-full max-w-screen-lg  px-16 pt-16 ">
         <div className={jua.className}>
@@ -152,10 +152,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative w-full flex justify-center my-12 translate-x-[-2rem]">
-        <section className="bg-utama border border-x-0 border-slate-800 w-full h-56 w-[3000px] rotate-[5deg] rounded flex items-center">
-          <div className="relative flex gap-6 carousel-secondary">
-
+      <section className="relative w-full flex justify-center my-12 translate-x-[-2rem] max-xl:max-w-screen-lg ">
+        <section className="bg-utama border border-x-0 border-slate-800 w-full py-6 w-full rotate-[5deg] rounded flex items-center">
+          <div className="relative flex gap-6 carousel-secondary overflow-hidden">
             {imageUrls.map((url, index) =>
               <StackComponent key={index} type={url.toUpperCase()} id={`${"stack" + index}`} name="stack" imageUrl={`${"assets/" + url + ".jpg"}`} last={imageUrls.length - 1 == index} first={index == 0} />
             )}
@@ -163,10 +162,10 @@ export default function Home() {
         </section>
       </section>
       <section className="relative flex flex-col items-center justify-center px-16 max-w-screen-lg w-full">
-        <h1 className="uppercase text-4xl font-black ">MY Journey</h1>
-        <div className="grid grid-cols-9 w-full my-10">
-          <div className="col-span-4 grid grid-rows-4 justify-end text-end gap-4">
-            <div className="flex flex-col items-end gap-y-4">
+        <h1 className="uppercase text-4xl font-black">MY Journey</h1>
+        <div className="grid grid-cols-9 w-full my-10 ">
+          <div className="col-span-4 grid grid-rows-4 justify-end text-end gap-4 max-xl:hidden">
+            <div className="flex flex-col items-end gap-y-4 ">
               <YearAgoComponent year={'2014/02/01'} />
               <LinkComponent link="/media/" title="Me doing green screen thing :D" />
               <LinkComponent link="https://www.youtube.com/@mrezamuktasib/" title="My Youtube Channel" />
@@ -304,7 +303,7 @@ export default function Home() {
 
         </div>
       </section>
-      <section className="flex flex-col w-full bg-slate-800 relative z-2 items-center ">
+      <section className="flex flex-col w-full bg-slate-800 relative z-2 items-center overflow-hidden">
         <div className="relative flex flex-col px-16 max-w-screen-lg py-16 grid grid-cols-2 gap-16">
           <div className="flex flex-col gap-6">
             <h1 className="text-3xl font-bold">What I&apos;ve Built</h1>
