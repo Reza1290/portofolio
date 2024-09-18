@@ -21,9 +21,9 @@ const FlipCardComponent: React.FC<FlipCardComponentProps> = ({ title, stack, des
       </div>
       <div className="mx-4 flex gap-2 flex-wrap">
         {
-          stack.map((data) =>
+          stack.map((data,idx) =>
           (
-            <div className="bg-white text-black rounded-md px-2 py-1 font-semibold text-xs border border-x-0 border-y-0 border-b-[0.2rem]">
+            <div key={idx} className="bg-white text-black rounded-md px-2 py-1 font-semibold text-xs border border-x-0 border-y-0 border-b-[0.2rem]">
               {data}
             </div>
           )
