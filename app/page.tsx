@@ -141,7 +141,7 @@ export default function Home() {
 
           <a target="_blank" href="https://www.linkedin.com/in/m-rezamuktasib/" className="bg-blue-600 rounded-md h-12 flex justify-center items-center group-hover">
             <button className="text-md font-bold px-8 flex rounded-md bg-blue-400 w-full justify-center h-full items-center translate-y-[-3px] hover:bg-blue-500 transition-colors ease-in">
-              Connect In LinkedIn
+              Connect On LinkedIn
             </button>
           </a>
           <a target="_blank" href="https://github.com/Reza1290" className="bg-slate-800 rounded-md h-12 flex justify-center items-center group-hover">
