@@ -21,10 +21,17 @@ import FlipCardComponent from "./components/FlipCardComponent";
 import CalendarComponent from "./components/CalendarComponent";
 import ExperienceCardComponent from "./components/ExperienceCardComponent";
 import ProductComponent from "./components/ProductComponent";
+import NavBar from "./components/NavBar";
+import fs from "fs/promises";
+import path from "path";
+import ProjectSection from "./components/ProjectSection";
+
+
 const jua = Jua({ weight: "400", subsets: ["latin"] });
 export default function Home() {
   const [init, setInit] = useState(false);
 
+  
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -124,16 +131,7 @@ export default function Home() {
       options={options}
     />
     <main className="flex min-h-screen flex-col items-center bg-utama max-w-layar overflow-x-hidden">
-      <nav className="flex justify-between items-center w-full max-w-screen-lg  max-sm:px-8 px-16 pt-16 ">
-        <div className={jua.className}>
-          <p className="text-4xl font-bold select-none">Reza</p>
-        </div>
-        <div className="bg-blue-600 rounded-md h-10 w-28 flex justify-center items-center group-hover">
-          <button className="flex rounded-md bg-blue-400 w-full justify-center h-full items-center translate-y-[-3px] font-medium hover:bg-blue-500 transition-colors ease-in">
-            Start
-          </button>
-        </div>
-      </nav>
+      <NavBar></NavBar>
       <section className="flex flex-col items-center justify-center my-16  max-sm:px-8 px-16 ">
         <h1 className="uppercase text-6xl font-black ">avada kedavra!</h1>
         <p className="text-xl">Get to know me more, feel free to share your thoughts.</p>
@@ -317,27 +315,7 @@ export default function Home() {
 
         </div>
       </section>
-      <section className="relative flex flex-col items-center justify-center max-sm:px-8 px-16 max-w-screen-lg w-full">
-        <h1 className="uppercase text-4xl font-black my-12">Featured Works</h1>
-        <div className="grid xl:grid-cols-11 w-full my-10 grid-flow-row-dense max-xl:grid-rows-2 max-md:grid-cols-2 max-sm:grid-cols-1 max-xl:grid-cols-3 max-xl:gap-5  max-md:px-10">
-          <div className="xl:col-span-3 flex justifty-center items-center">
-            <FlipCardComponent />
-          </div>
-          <div className="xl:col-start-5 xl:col-span-3">
-            {/* <div className="bg-red-400 hover:bg-red-500 cursor-pointer transition-all ease-in-out w-full min-h-[20rem] rounded-md border border-x-0 border-t-0 border-b-[0.2rem] border-red-600">
-
-            </div> */}
-            <FlipCardComponent />
-
-          </div>
-          <div className="xl:col-span-3 xl:col-start-9">
-            {/* <div className="bg-yellow-400 hover:bg-yellow-500 cursor-pointer transition-all ease-in-out w-full min-h-[20rem] rounded-md border border-x-0 border-t-0 border-b-[0.2rem] border-yellow-600">
-
-            </div> */}
-            <FlipCardComponent />
-          </div>
-        </div>
-      </section>
+      <ProjectSection></ProjectSection>
       {/* <CalendarComponent></CalendarComponent> */}
       <section className="relative flex flex-col items-center justify-center max-sm:px-8 px-16 max-w-screen-lg w-full py-16">
         <h1 className="uppercase text-4xl font-black mt-12"> What I&apos;ve Achieved</h1>
@@ -398,26 +376,26 @@ export default function Home() {
         <div className="flex gap-8">
           <div className="">
             <a href="">
-              
-            Hubungi Saya
+
+              Hubungi Saya
             </a>
           </div>
           <div className="">
             <a href="">
-              
-            Download Cv
+
+              Download Cv
             </a>
           </div>
           <div className="">
             <a href="">
-              
-            Labs
+
+              Labs
             </a>
           </div>
           <div>
             <a href="">
-              
-            Xd
+
+              Xd
             </a>
           </div>
         </div>
