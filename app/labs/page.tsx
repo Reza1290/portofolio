@@ -9,7 +9,7 @@ export default function Page() {
   const languages = ['TypeScript', 'JavaScript', 'Golang', 'Python', 'Java', 'PHP', 'C', 'Etc'];
 
   // Function to handle language click and update URL query param
-  const handleLanguageClick = (language) => {
+  const handleLanguageClick = (language:string) => {
     const newParams = new URLSearchParams(searchParams);
     newParams.set('stack', language);
     router.push(`/labs?${newParams.toString()}`);
