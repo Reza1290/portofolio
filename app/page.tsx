@@ -154,7 +154,7 @@ export default function Home() {
         <section className="bg-utama border border-x-0 border-slate-800 w-full py-6 w-full rotate-[5deg] rounded flex items-center">
           <div className="relative flex gap-6 carousel-secondary">
             {imageUrls.map((url, index) =>
-              <StackComponent key={index} type={url.toUpperCase()} id={`${"stack" + index}`} name="stack" imageUrl={`${"assets/" + url + ".jpg"}`} last={imageUrls.length - 1 == index} first={index == 0} />
+              <StackComponent key={index} type={url} id={`${"stack" + index}`} name="stack" imageUrl={`${"assets/" + url + ".jpg"}`} last={imageUrls.length - 1 == index} first={index == 0} />
             )}
           </div>
         </section>
