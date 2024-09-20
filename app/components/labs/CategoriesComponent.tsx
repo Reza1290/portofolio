@@ -61,7 +61,8 @@ const CategoriesComponent: React.FC = () => {
 
     return (
         <section className="flex flex-col mt-5 items-center ">
-            <div className="flex justify-center items-end bg-utama w-full max-w-screen-lg">
+            <div className="flex justify-center items-end bg-utama w-full max-w-screen-lg max-lg:px-[200px] max-lg:max-w-screen-sm max-lg:overflow-x-scroll">
+                
                 {languages.map((language, index) => (
                     <div
                         key={index}
@@ -72,16 +73,17 @@ const CategoriesComponent: React.FC = () => {
                         {language}
                     </div>
                 ))}
+                
             </div>
-            <div className="bg-gray-950 w-screen min-h-[900px] flex flex-col  items-center ">
-                <div className={`absolute flex justify-center items-center min-h-[900px] bg-gray-950 filter blur-[7px] animate-bang w-full ${paginatedData.length > 6  ? 'h-[1300px]' : 'overflow-hidden'}`}>
-                    <div className="blackhole left-[800px] top-[200px] "></div>
+            <div className="bg-gray-950 w-screen min-h-[900px] flex flex-col  items-center">
+                <div className={`absolute flex justify-center items-center max-xl:min-h-[2400px] min-h-[900px]  overflow-x-hidden bg-gray-950 filter blur-[7px] animate-bang w-full ${paginatedData.length > 6 ? 'h-[1300px]' : 'overflow-hidden'}`}>
+                    <div className="blackhole max-xl:left-[200px] left-[800px] top-[200px] "></div>
                 </div>
                 <div className='relative z-[999] max-w-screen-lg w-full p-10 '>
                     {loading ? (
                         <div className='text-center font-bold text-xl'>Thinking...</div>
                     ) : (
-                        <div className="grid grid-cols-3 gap-10">
+                        <div className="grid grid-cols-3 gap-10 max-xl:grid-cols-2 max-lg:grid-cols-1">
                             {paginatedData.length === 0 ? (
                                 <div className='col-span-3 text-center font-bold text-xl'>Upcoming</div>
                             ) : (
