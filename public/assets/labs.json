@@ -1,6 +1,41 @@
 {
     "data" : [
         {
+            "title" : "BudgetIn",
+            "desc"  : "My Project about making Budgeting App " ,
+            "stack" : ["Flutter"],
+            "img"   : "/img/thumbnail22.png",
+            "href"  : "https://github.com/Reza1290/budgetin-app"
+        },
+        {
+            "title" : "TOEFL APP (API) BE",
+            "desc"  : "My Project about making Learning App for Toefl Based on PENS TOEFL Ceritifactions ( BACKEND )" ,
+            "stack" : ["PHP","Laravel","Docker","Microservices"],
+            "img"   : "/img/thumbnail22.png",
+            "href"  : "https://github.com/Reza1290/admin-panel-etoefl"
+        },
+        {
+            "title" : "TOEFL APP (LEARNING)",
+            "desc"  : "My Project about making Learning App for Toefl Based on PENS TOEFL Ceritifactions" ,
+            "stack" : ["Flutter"],
+            "img"   : "/img/thumbnail22.png",
+            "href"  : "https://github.com/Reza1290/toefl-app-pens"
+        },
+        {
+            "title" : "Golang Backend Ciptakode Site ( Private )",
+            "desc"  : "My Project about making Backend for my Ciptakode Site" ,
+            "stack" : ["TypeScript","NextJs"],
+            "img"   : "/img/thumbnail22.png",
+            "href"  : "https://github.com/Reza1290/golang-backend-ciptakode"
+        },
+        {
+            "title" : "Landing Page Edumate Diakad",
+            "desc"  : "Slicing TailwindCSS into NextJs App for landing page NGO" ,
+            "stack" : ["JavaScript","NextJs","TailwindCSS"],
+            "img"   : "/img/thumbnail22.png",
+            "href"  : "https://github.com/Reza1290/edumate-landing-page"
+        },
+        {
             "title" : "Kasir Lite (Cashier App using Next Js) FE",
             "desc"  : "My Project about making Front-end for my Kasir App or Cashier (POS) 24 Hours Dev Challange" ,
             "stack" : ["JavaScript","NextJs"],
@@ -13,6 +48,20 @@
             "stack" : ["PHP","Laravel","Lumen"],
             "img"   : "/img/thumbnail22.png",
             "href"  : "https://github.com/Reza1290/backend-kasir-lumen"
+        },
+        {
+            "title" : "LostAndFound App (API)",
+            "desc"  : "My Project about making App for person who lost or found a thing" ,
+            "stack" : ["Python","MongoDB"],
+            "img"   : "/img/thumbnail22.png",
+            "href"  : "https://github.com/Reza1290/lost-found-api"
+        },
+        {
+            "title" : "LostAndFound App (FE)",
+            "desc"  : "My Project about making App for person who lost or found a thing" ,
+            "stack" : ["JavaScript","ReactJs"],
+            "img"   : "/img/thumbnail22.png",
+            "href"  : "https://github.com/Reza1290/react-pymongo-lostandfound"
         },
         {
             "title" : "PENS Lupis React Front-end (in Progress)",
