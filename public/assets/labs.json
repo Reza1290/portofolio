@@ -1,6 +1,19 @@
 {
     "data" : [
-
+        {
+            "title" : "Kasir Lite (Cashier App using Next Js) FE",
+            "desc"  : "My Project about making Front-end for my Kasir App or Cashier (POS) 24 Hours Dev Challange" ,
+            "stack" : ["JavaScript","NextJs"],
+            "img"   : "/img/thumbnail22.png",
+            "href"  : "https://github.com/Reza1290/frontend-kasir-nextjs"
+        },
+        {
+            "title" : "Kasir Lite (Laravel) BE",
+            "desc"  : "My Project about making Front-end for my Kasir App or Cashier (POS) 24 Hours Dev Challange" ,
+            "stack" : ["PHP","Laravel","Lumen"],
+            "img"   : "/img/thumbnail22.png",
+            "href"  : "https://github.com/Reza1290/backend-kasir-lumen"
+        },
         {
             "title" : "PENS Lupis React Front-end (in Progress)",
             "desc"  : "My Project about making Front-end for my Pens-Lupis app ( Portal For University) E-Learning and academics thing" ,
