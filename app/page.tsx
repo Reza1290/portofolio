@@ -122,7 +122,7 @@ export default function Home() {
     [],
   );
 
-  const imageUrls = ["c", "py", "go", "js", "php", "java", "ts"]
+  const imageUrls = ["C", "Python", "Golang", "JavaScript", "PHP", "Java", "TypeScript"]
 
   if (init) return (<>
     <Particles
@@ -336,7 +336,7 @@ export default function Home() {
       <section className="flex flex-col w-full bg-slate-800 relative z-2 items-center overflow-hidden">
         <div className="relative max-sm:px-8 px-16 max-w-screen-lg py-16 grid grid-cols-2 gap-16 max-md:grid-cols-1">
           <div className="flex flex-col gap-6">
-            <h1 className="text-3xl font-bold">What I&apos;ve Built</h1>
+            <h1 className="text-4xl font-black">What I&apos;ve Built</h1>
             <h1 className="text-md mb-12 text-slate-200 text-justify">This is the various digital products and platforms I&apos;ve created over the years. From YouTube channels and blogs to entrepreneurial ventures, each project reflects my passion for innovation and creativity.
               Whether it&apos;s sharing knowledge, building communities, or launching a business, these creations represent my journey of growth and learning in the digital world. Explore the projects that have shaped my skills and vision for the future.
             </h1>

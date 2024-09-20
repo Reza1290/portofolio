@@ -69,6 +69,12 @@ const ProjectSection: React.FC<ProjectSectionProps> = () => {
                     </div>
                 </div>
             )}
+
+            <a target="_blank" href="/labs" className="bg-blue-600 rounded-md h-12 flex justify-center items-center group-hover">
+                <button className="text-md font-bold px-8 flex rounded-md bg-blue-400 w-full justify-center h-full items-center translate-y-[-3px] hover:bg-blue-500 transition-colors ease-in">
+                    More (Labs)
+                </button>
+            </a>
         </section>
     );
 };
