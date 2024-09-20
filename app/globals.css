@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.scrolled {
+
+  img {
+    animation: defile 3s infinite linear;
+    position: relative;
+  }
+}
+
+@keyframes defile {
+  25% {
+    left: 0%;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+  75% {
+    right: 100%;
+  }
+
+  100% {
+    right: 0%;
+  }
+}
+
+
+
+/* .carousel-primary,
+.carousel-secondary {
+  left: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  position: absolute;
+  white-space: nowrap;
+} */
+
+.carousel-primary {
+  display: flex;
+  justify-content: space-around;
+  animation: scroll-horizontal 10s linear infinite;
+}
+
+.carousel-secondary {
+  width: 100%;
+  animation: scroll-horizontal 10s linear infinite;
+  animation-delay: 105;
+  /* animation-duration: 10000ms; */
+  /* --mask-image-content: linear-gradient(to left, transparent,
+    rgb(15 25 30) , rgb(15 25 30),  transparent
+  ); */
+
+
+}
+
+.mask-first {
+  mask-image: linear-gradient(to left,
+      rgba(15, 25, 30, 1) 0%,
+      /* Fully opaque at the start */
+      rgba(15, 25, 30, 1) 30%,
+      /* Keep it opaque for the first 30% */
+      rgba(15, 25, 30, 0.6) 50%,
+      /* Start fading out */
+      rgba(15, 25, 30, 0.2) 70%,
+      /* More transparency */
+      transparent 100%
+      /* Fully transparent at the end */
+    );
+
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+}
+
+.mask-last {
+  mask-image: linear-gradient(to right,
+      rgba(15, 25, 30, 1) 0%,
+      /* Fully opaque at the start */
+      rgba(15, 25, 30, 1) 30%,
+      /* Keep it opaque for the first 30% */
+      rgba(15, 25, 30, 0.6) 50%,
+      /* Start fading out */
+      rgba(15, 25, 30, 0.2) 70%,
+      /* More transparency */
+      transparent 100%
+      /* Fully transparent at the end */
+    );
+  /* mask-size: 100%; */
+  mask-repeat: no-repeat;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+
+.carousel-primary:hover,
+.carousel-primary:hover~.carousel-secondary {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.carousel-secondary:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.scroll-container:hover.carousel-primary:not(:hover) {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.flip:hover {
+  transform: rotateY(50deg);
+  transition: all 20s linear ease-in-out;
+  transition-duration: 1000ms;
+}
+
+.cursor-mini {
+
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-track {
+    width: 8px;
+    border: none;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-button,
+  ::-webkit-scrollbar-track-piece,
+  ::-webkit-scrollbar-corner,
+  ::-webkit-resizer {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: #1A5FAC;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-image: url("https://i.imgur.com/GvV1R30.png");
+    background-repeat: repeat-y;
+    background-size: contain;
+  }
+}
+
+/* Shotout to https://codepen.io/waveciou/pen/ZZydGx i turn it into Tailwind hehe:D */
+
+@layer utilities {
+  .blackhole {
+    @apply relative w-[40vw] h-[40vw] min-w-[250px] min-h-[250px] rounded-full bg-black;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+    box-shadow: 0 0 7vw #f50, 0 0 5vw #ffeb3b, -4vw -1vw 30vw #f60;
+    animation: rotate 3s linear infinite;
+  }
+
+  .blackhole::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full rounded-full;
+    background-color: #000;
+    box-shadow: 0 0 7vw #f50, 0 0 5vw #ffeb3b, -4vw -1vw 30vw #f60;
+    animation: corona 21s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes corona {
+    0% {
+      box-shadow: 0 0 7vw #f50, 0 0 5vw #ffeb3b, -4vw -1vw 30vw #f60;
+    }
+
+    50% {
+      box-shadow: 0 0 10vw #f50, -1vw 0 5vw #ffeb3b, -6vw -1vw 15vw #f60;
+    }
+
+    90% {
+      box-shadow: 0 0 0.5vw #fff, 0 0 0 #f80, 0 0 0 #f60;
+    }
+
+    91% {
+      box-shadow: 0 0 0 #fff, 0 0 0 #f80, 0 0 0 #f60;
+    }
+
+    95% {
+      box-shadow: 0 0 90vw #fff, 0 0 100vw #f80, 0 0 100vw #f60;
+    }
+
+    97% {
+      box-shadow: 0 0 0 #fff, 0 0 0 #ffeb3b, 0 0 0 #f60;
+    }
+
+    100% {
+      box-shadow: 0 0 7vw #f50, 0 0 5vw #ffeb3b, -4vw -1vw 30vw #f60;
+    }
+  }
+}
+
+.animate-bang{
+  animation: bang 21s linear infinite;
+}
+
+@keyframes bang {
+
+  0%,
+  91% {
+    @apply bg-gray-950
+  }
+
+  95%,
+  97% {
+    background-color: #636363;
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    @apply bg-gray-950
+  }
+}
