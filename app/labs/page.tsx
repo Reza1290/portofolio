@@ -1,4 +1,3 @@
-'use client';
 import NavBar from '../components/NavBar';
 import { Suspense } from 'react';
 import CategoriesComponent from '../components/labs/CategoriesComponent';
