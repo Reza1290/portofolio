@@ -120,6 +120,13 @@
             "href"  : "https://anime-cek.netlify.app/"
         },
         {
+            "title" : "Competitive Directory",
+            "desc"  : "PROBLEM SOLVING THING :D LeetCode: Reza1290" ,
+            "stack" : ["C","C++","Python"],
+            "img"   : "/img/thumbnail5.png",
+            "href"  : "https://github.com/Reza1290/competitive-coding-dir"
+        },
+        {
             "title" : "Blog Pemrograman.tech",
             "desc"  : "Blog of Pemrograman.tech made by me using Blogger.com, Tailwind.css. About Tutorials etc." ,
             "stack" : ["Blogger","BloggerHtml"],
