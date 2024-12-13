@@ -447,7 +447,7 @@ export default function Home() {
         </div>
 
         <div className="text-center font-semibold">
-          ©2024-2025 Reza1290. CopyLeft. <br /> Design Inspired by Tako & FontAwesome ♥, rest is my idea! :D
+          ©2024-2025 Reza1290. CopyLeft. <br /> Design Inspired by Tako & FontAwesome ♥, rest is my idea! :D 
         </div>
       </section>
     </main>
