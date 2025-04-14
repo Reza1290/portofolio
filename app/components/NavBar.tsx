@@ -15,7 +15,7 @@ const NavBar: React.FC<NavBarProps> = () => {
 
     return (
         <nav className="flex justify-between items-center w-full max-w-screen-lg  max-sm:px-8 px-16 pt-16 ">
-            <div>
+            <div className={jua.className}>
                 <a href="/" className="text-4xl font-bold select-none">Reza</a>
             </div>
             <div className="bg-blue-600 rounded-md h-10 w-28 flex justify-center items-center group-hover">
