@@ -1,15 +1,13 @@
 'use client';
-import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { Jua } from "next/font/google";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
-import {
-  type ISourceOptions,
-  type Container,
-  MoveDirection,
-  OutMode,
-} from "@tsparticles/engine";
-import { loadFull } from "tsparticles";
+// import {
+//   type ISourceOptions,
+//   type Container,
+//   MoveDirection,
+//   OutMode,
+// } from "@tsparticles/engine";
 import StackComponent from "./components/StackComponent";
 import YearAgoComponent from "./components/YearAgoComponent";
 import TitleJourneyComponent from "./components/TitleJourneyComponent";
@@ -34,102 +32,31 @@ export default function Home() {
   
   // this should be run only once per application lifetime
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
-      await loadFull(engine);
-      //await loadBasic(engine);
-    }).then(() => {
+    // initParticlesEngine(async (engine) => {
+    //   // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    //   // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    //   // starting from v2 you can add only the features you need reducing the bundle size
+    //   //await loadAll(engine);
+    //   //await loadFull(engine);
+    //   await loadFull(engine);
+    //   //await loadBasic(engine);
+    // }).then(() => {
       setInit(true);
-    });
+    // });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
+ 
 
-  const options: ISourceOptions = useMemo(
-    () => ({
-      // background: {
-      //   color: {
-      //     value: "#0d47a1",
-      //   },
-      // },
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: false,
-            mode: "push",
-          },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
-        },
-        modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 75,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: "#ffffff",
-        },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: false,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          direction: MoveDirection.none,
-          enable: true,
-          outModes: {
-            default: OutMode.out,
-          },
-          random: false,
-          speed: 0.2,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 80,
-        },
-        opacity: {
-          value: 0.8,
-        },
-        shape: {
-          type: "circle",
-        },
-        size: {
-          value: { min: 1, max: 3 },
-        },
-      },
-      detectRetina: true,
-    }),
-    [],
-  );
+  
 
   const imageUrls = ["C", "Python", "Golang", "JavaScript", "PHP", "Java", "TypeScript"]
 
   if (init) return (<>
-    <Particles
+    {/* <Particles
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={options}
-    />
+    /> */}
     <main className="flex min-h-screen flex-col items-center bg-utama max-w-layar overflow-x-hidden">
       <NavBar></NavBar>
       <section className="flex flex-col items-center justify-center my-16  max-sm:px-8 px-16 ">
@@ -151,7 +78,7 @@ export default function Home() {
       </section>
 
       <section className="relative w-full flex justify-center my-12 translate-x-[-2rem] max-xl:max-w-screen-lg ">
-        <section className="bg-utama border border-x-0 border-slate-800 w-full py-6 w-full rotate-[5deg] rounded flex items-center">
+        <section className="bg-utama border border-x-0 border-slate-800 py-6 w-full rotate-[5deg] rounded flex items-center">
           <div className="relative flex gap-6 carousel-secondary">
             {imageUrls.map((url, index) =>
               <StackComponent key={index} type={url.toUpperCase()} id={`${"stack" + index}`} name="stack" imageUrl={`${"assets/" + url + ".jpg"}`} last={imageUrls.length - 1 == index} first={index == 0} />
@@ -161,7 +88,7 @@ export default function Home() {
       </section>
       <section className="relative flex flex-col items-center justify-center max-sm:px-2 px-16 max-w-screen-lg w-full">
         <h1 className="uppercase text-4xl font-black">MY Journey</h1>
-        <div className="grid grid-cols-9 max-sm: grid-cols-12 w-full my-10 ">
+        <div className="grid grid-cols-9 max-sm:grid-cols-12 w-full my-10 ">
           <div className="col-span-4 max-sm:col-auto grid grid-rows-4 justify-end text-end gap-4 max-sm:hidden">
             <div className="flex flex-col items-end gap-y-4 ">
               <YearAgoComponent year={'2014/02/01'} />
@@ -234,14 +161,14 @@ export default function Home() {
 
                 </p>
               </CardJourneyComponent>
-              <div className="flex flex-col items-end gap-y-4 mb-4 max-sm:flex hidden">
+              <div className="flex-col items-end gap-y-4 mb-4 max-sm:flex hidden">
                 <YearAgoComponent year={'2014/02/01'} />
                 <LinkComponent link="/media/" title="Me doing green screen thing :D" />
                 <LinkComponent link="https://www.youtube.com/@mrezamuktasib/" title="My Youtube Channel" />
               </div>
             </div>
             <div className="flex flex-col items-start gap-y-4">
-              <div className="flex flex-col mb-4 max-sm:flex hidden">
+              <div className="flex-col mb-4 max-sm:flex hidden">
                 <TitleJourneyComponent title="Junior High School" />
                 <SubtitleJourneyComponent subtitle="SMP NEGERI 3 SURABAYA" reference="https://smpn3sby.sch.id/" />
                 <CardJourneyComponent>
@@ -283,14 +210,14 @@ export default function Home() {
 
                 </p>
               </CardJourneyComponent>
-              <div className="flex flex-col items-end gap-y-4 mb-4 max-sm:flex hidden">
+              <div className="flex-col items-end gap-y-4 mb-4 max-sm:flex hidden">
                 <YearAgoComponent year={'2019/01/01'} />
                 <LinkComponent link="/media/" title="Abstract lists" />
                 <LinkComponent link="#media" title="Achievement" />
               </div>
             </div>
             <div className="flex flex-col items-start gap-y-4">
-              <div className="flex flex-col max-sm:flex hidden">
+              <div className="flex-col max-sm:flex hidden">
                 <TitleJourneyComponent title="University" />
                 <SubtitleJourneyComponent subtitle="POLITEKNIK ELEKTRONIKA NEGERI SURABAYA (EEPIS)" reference="" />
                 <CardJourneyComponent>
@@ -320,7 +247,7 @@ export default function Home() {
       <section className="relative flex flex-col items-center justify-center max-sm:px-8 px-16 max-w-screen-lg w-full py-16">
         <h1 className="uppercase text-4xl font-black mt-12"> What I&apos;ve Achieved</h1>
         <h1 className=" text-xl font-semibold mb-12 text-slate-200"><span className="bg-blue-400 rounded px-1">Experiences</span>, <span className="bg-red-400 rounded px-1">Certifications  or Licenses</span>, <span className="bg-green-500 px-1 rounded">Awards</span></h1>
-        <div className="relative w-full flex justify-center items-center grid grid-rows-4 gap-y-8">
+        <div className="relative w-full justify-center items-center grid grid-rows-4 gap-y-8">
           <ExperienceCardComponent type="exp" month="Nov" year="2023" title="Intership Web Developer (3 Months)" subtitle="PT. Digital Solusi Master" />
 
           <ExperienceCardComponent month="Nov" year="2023" title="1st Winner at FASILKOM FEST UPN " subtitle="Business Plan Competition" />
@@ -348,8 +275,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full relative z-2 w-full flex justify-center">
-        <div className="relative flex flex-col max-sm:px-8 px-16 max-w-screen-lg py-16 grid grid-cols-12 max-md:grid-cols-3 gap-8 grid-flow-col-dense 	max-md:grid-rows-3">
+      <section className="w-full relative z-2  flex justify-center">
+        <div className="relative flex-col max-sm:px-8 px-16 max-w-screen-lg py-16 grid grid-cols-12 max-md:grid-cols-3 gap-8 grid-flow-col-dense 	max-md:grid-rows-3">
           <ProductComponent title="Pemrograman Tech" desc="I create Pemrograman Tech to make Tutorial about Tech such as web Programming."
             youtube="https://www.youtube.com/@pemrogramantech"
             instagram="https://instagram.com/pemrograman.tech"
